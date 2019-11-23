@@ -2,7 +2,7 @@ import { Booking } from '../../booking/shared/booking.model';
 
 export class Rental {
 
-	static readonly CATEGORIES = ['house', 'apartment', 'condo'];
+	static readonly CATEGORIES = ['house', 'apartment', 'home stay', 'vacational rental'];
 
 	_id: string;
 	title: string;
@@ -15,6 +15,7 @@ export class Rental {
 	dailyRate: number;
 	shared: boolean;
 	createdAt: string;
+	fooding: boolean;
 	bookings: Booking[];
 }
 

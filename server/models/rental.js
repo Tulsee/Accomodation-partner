@@ -9,6 +9,7 @@ const rentalSchema = new Schema({
   image: { type: String, required: true },
   bedrooms: Number,
   shared: Boolean,
+  fooding: Boolean,
   description: { type: String, required: true },
   dailyRate: Number,
   createdAt: { type: Date, default: Date.now },

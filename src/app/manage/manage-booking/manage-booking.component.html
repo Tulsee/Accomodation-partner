@@ -13,7 +13,7 @@
               <p class="card-text booking-desc"> {{booking.rental.description}}</p>
             </ng-container>
             <p class="card-text booking-days"> {{booking.startAt | formatDate}} - {{booking.endAt | formatDate}} | {{booking.days}} days</p>
-            <p class="card-text"><span>Price: </span> <span class="booking-price-value">{{booking.totalPrice}} $</span></p>
+            <p class="card-text"><span>Price: </span> <span class="booking-price-value">रू {{booking.totalPrice}}</span></p>
             <a *ngIf="booking.rental" class="btn btn-bwm" routerLink="/rentals/{{booking.rental._id}}">Go to Rental</a>
           </div>
           <div class="card-footer text-muted">
@@ -49,7 +49,7 @@
               <p class="card-text booking-desc"> {{payment.booking.rental.description}}</p>
             </ng-container>
             <p class="card-text booking-days"> {{payment.booking.startAt | formatDate}} - {{payment.booking.endAt | formatDate}} | {{payment.booking.days}} days</p>
-            <p class="card-text"><span>Revenue: </span> <span class="booking-price-value">{{payment.amount / 100}} $</span></p>
+            <p class="card-text"><span>Revenue: </span> <span class="booking-price-value">रू {{payment.amount / 100}}</span></p>
 
             <p class="card-text"><span>Status: </span> <span class="booking-price-value">{{payment.status}}</span></p>
 

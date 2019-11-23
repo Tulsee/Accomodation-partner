@@ -79,7 +79,7 @@
             <label for="dailyRate">Daily Rate</label>
             <div class="input-group">
               <div class="input-group-prepend">
-                <div class="input-group-text">$</div>
+                <div class="input-group-text">रू </div>
               </div>
               <input type="number"
                      name="dailyRate"
@@ -90,7 +90,15 @@
                      required>
             </div>
           </div>
-
+          <div class="form-group">
+            <label for="fooding">fooding available?</label>
+            <input type="checkbox"
+                   class="form-control"
+                   id="fooding"
+                   name="fooding"
+                   [(ngModel)]="newRental.fooding"
+                   >
+          </div>
           <div class="form-group">
             <label for="shared">Shared</label>
             <input type="checkbox"
@@ -98,7 +106,7 @@
                    id="shared"
                    name="shared"
                    [(ngModel)]="newRental.shared"
-                   required>
+                   >
           </div>
           <button (click)="createRental()"
                   [disabled]="!rentalForm.form.valid || !newRental.image"

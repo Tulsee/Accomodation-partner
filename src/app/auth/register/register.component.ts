@@ -9,11 +9,11 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  formData: any = {username: 'Filip'};
+  formData: any = { username: '' };
   errors: any[] = [];
 
   constructor(private auth: AuthService,
-              private router: Router) { }
+    private router: Router) { }
 
   ngOnInit() {
   }
@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
 
     this.auth.register(this.formData).subscribe(
       () => {
-        this.router.navigate(['/login', {registered: 'success'}]);
+        this.router.navigate(['/login', { registered: 'success' }]);
       },
       (errorResponse) => {
         this.errors = errorResponse.error.errors;
